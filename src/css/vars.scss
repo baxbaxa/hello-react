@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "MarkGEO-Regular";
+    src: url("/fonts/MarkGEO-Regular.woff2");
+}
+
+@font-face {
+    font-family: "MarkGEO-Bold";
+    src: url("/fonts/MarkGEO-Bold.woff2");
+}
+
+%mfont {
+    font-family: "MarkGEO-Bold";
+}
+
+%fira {
+    font-family: "MarkGEO-Regular";
+}
+
+%regular {
+    font-family: "MarkGEO-Regular", sans-serif;
+    ;
+}
+
+%noto {
+    font-family: "MarkGEO-Regular", sans-serif;
+    font-style: normal;
+}
+
+%img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%sls {
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 14px;
+    @extend %noto;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+%float {
+    width: 100%;
+    float: left;
+}
+
+%btn {
+    padding: 16px 30px;
+    font-family: "MarkGEO-Regular";
+    font-size: 13px;
+}
+
+h1 {
+    font-size: 21px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+$mcol: #5F30CD;
+$scol: #051C2C;
+$ccol:#E5E7E9;
+$dcol: #ccffcc;
+$ecol: #2D2D2D;

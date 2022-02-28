@@ -1,0 +1,334 @@
+@import "~bootstrap/scss/bootstrap";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: "MarkGEO-Regular";
+    src: url("/fonts/MarkGEO-Regular.woff2");
+}
+
+@font-face {
+    font-family: "MarkGEO-Bold";
+    src: url("/fonts/MarkGEO-Bold.woff2");
+}
+
+%mfont {
+    font-family: "MarkGEO-Bold";
+}
+
+%fira {
+    font-family: "MarkGEO-Regular";
+}
+
+%regular {
+    font-family: "MarkGEO-Regular", sans-serif;
+    ;
+}
+
+%noto {
+    font-family: "MarkGEO-Regular", sans-serif;
+    font-style: normal;
+}
+
+%img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%sls {
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 14px;
+    @extend %noto;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+%float {
+    width: 100%;
+    float: left;
+}
+
+%btn {
+    padding: 16px 30px;
+    font-family: "MarkGEO-Regular";
+    font-size: 13px;
+}
+
+h1 {
+    font-size: 21px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+$mcol: #5F30CD;
+$scol: #051C2C;
+$ccol:#E5E7E9;
+$dcol: #ccffcc;
+$ecol: #2D2D2D;
+body {
+    background: #F3F3F3;
+    @extend %regular;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.header {
+    @extend %float;
+    padding: 20px 0;
+    &-top {
+        @extend %float;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__logo {
+            a {
+                font-size: 40px;
+                color: $mcol;
+                @extend %mfont;
+            }
+        }
+        &__text {
+            h1 {
+                font-size: 16px;
+                @extend %regular;
+                span {
+                    color: $mcol;
+                    @extend %mfont;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    &-nav {
+        @extend %float;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__logo {
+            a {
+                font-size: 30px;
+                color: $mcol;
+                @extend %mfont;
+            }
+        }
+        &__menu {
+            a {
+                @extend %mfont;
+                font-size: 16px;
+                color: $scol;
+                margin-left: 20px;
+                &.is-active {
+                    color: $mcol;
+                }
+            }
+        }
+    }
+}
+
+.posts {
+    &-card {
+        width: 100%;
+        float: left;
+        margin-right: 20px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        margin-top: 30px;
+        box-shadow: 5px 10px 15px rgba(1, 0, 0, .1);
+        &__img {
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+            border-radius: 10px;
+            float: left;
+            margin-bottom: 15px;
+            figure {
+                width: 100%;
+                height: 100%;
+                img {
+                    @extend %img;
+                }
+            }
+        }
+        &__text {
+            span {
+                color: $mcol;
+                margin-bottom: 15px;
+                @extend %mfont;
+                font-size: 10pt;
+                @extend %float;
+            }
+            p {
+                color: #888888;
+                font-size: 14px;
+                line-height: 2;
+                margin-top: 10px;
+            }
+            h2 {
+                @extend %mfont;
+                font-size: 14px;
+            }
+        }
+    }
+}
